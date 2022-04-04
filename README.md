@@ -2,7 +2,7 @@
 
 Exercicio para treinamento de criação de carrosel com HTML e CSS apenas!
 
-[Slideshow](https://github.com/LucasFeh/Carrosel/blob/main/slideshow.gif)
+![Slideshow](https://github.com/LucasFeh/Carrosel/blob/main/slideshow.gif)
 
 
 <div style="display: inline_block"><br>
