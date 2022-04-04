@@ -1,0 +1,240 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+section:nth-of-type(1){
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(3deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 29%, rgba(0,212,255,1) 100%);
+    border-bottom: #fff 2px solid;
+}
+
+
+input{
+    display: none;
+}
+.slides{
+    display: flex;
+    width: 501%;
+    height: 100%;
+}
+.slides img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    height: 520px;
+    width: 923px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: -1em 0em  2em 1em rgb(23, 23, 31);
+    
+}
+.navigation{
+    width: 924px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -30px;
+}
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.bar:hover{
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+    transition: 0.6s;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+    transition: 0.6s;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+    transition: 0.6s;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+    transition: 0.6s;
+}
+
+
+
+/* 2° carrosel */
+
+section:nth-of-type(2){
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+
+}
+
+.content2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+    max-height: 600px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    margin-left: 20em;
+
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 1em;
+    cursor: pointer;
+}
+
+.cards img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.cards img:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+   
+}
+
+
+#item1:checked ~ .cards #song4,
+#item2:checked ~ .cards #song1,
+#item3:checked ~ .cards #song2,
+#item4:checked ~ .cards #song3{
+    transform: translate(-40%) scale(0.8);
+    opacity: 0.2;
+    z-index: 0;
+    transition: 0.5s;
+}
+#item1:checked ~ .cards #song2,
+#item2:checked ~ .cards #song3,
+#item3:checked ~ .cards #song4,
+#item4:checked ~ .cards #song1{
+    transform: translate(40%) scale(0.8);
+    opacity: 0.2;
+    z-index: 0;
+    transition: 0.5s;
+}
+#item1:checked ~ .cards #song3,
+#item2:checked ~ .cards #song4,
+#item3:checked ~ .cards #song1,
+#item4:checked ~ .cards #song2{
+    transform: translate(0) scale(0.5);
+    opacity: 0.2;
+  transition: 0.5s;
+}
+
+#item1:checked ~ .cards #song1,
+#item2:checked ~ .cards #song2,
+#item3:checked ~ .cards #song3,
+#item4:checked ~ .cards #song4{
+    transform: translate(0) scale(1);
+    opacity: 1;
+    z-index: 1 ;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+/* 3° carrosel */
+
+section:nth-of-type(3){
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(183deg, rgba(2,0,36,1) 0%, rgba(115,104,61,1) 35%, rgba(0,212,255,1) 100%);
+    border-top: #fff 2px solid;
+
+}
+.cards2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.card2{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 1em;
+    cursor: pointer;
+}
+
+.cards2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#item-1:checked ~ .cards2 #song-4,
+#item-2:checked ~ .cards2 #song-1,
+#item-3:checked ~ .cards2 #song-2,
+#item-4:checked ~ .cards2 #song-3{
+    transform: translate(-100%) scale(0.9);
+    opacity: 0.6;
+    z-index: 0;
+    transition: 0.5s;
+}
+#item-1:checked ~ .cards2 #song-2,
+#item-2:checked ~ .cards2 #song-3,
+#item-3:checked ~ .cards2 #song-4,
+#item-4:checked ~ .cards2 #song-1{
+    transform: translate(100%) scale(0.9);
+    opacity: 0.6;
+    z-index: 0;
+    transition: 0.5s;
+}
+#item-1:checked ~ .cards2 #song-3,
+#item-2:checked ~ .cards2 #song-4,
+#item-3:checked ~ .cards2 #song-1,
+#item-4:checked ~ .cards2 #song-2{
+    transform: translate(0) scale(0.5);
+    opacity: 0.2;
+  transition: 0.5s;
+}
+#item-1:checked ~ .cards2 #song-1,
+#item-2:checked ~ .cards2 #song-2,
+#item-3:checked ~ .cards2 #song-3,
+#item-4:checked ~ .cards2 #song-4{
+    transform: translate(0) scale(1);
+    opacity: 1;
+    z-index: 1 ;
+  box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+  transition: 0.5s;
+}
